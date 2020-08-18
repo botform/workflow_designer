@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es2017",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "jsx": "react",
+    "jsxFactory": "h",
+    "typeRoots": ["node_modules/@types", "src/shared/@types"]
+  },
+  "include": [
+    "src",
+    "types/jsx.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

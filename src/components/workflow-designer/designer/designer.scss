@@ -1,0 +1,112 @@
+@import "~jsplumb/css/jsplumbtoolkit-defaults.css";
+
+.workflow-canvas {
+  position: relative;
+  display: block;
+  touch-action: none;
+  width: auto;
+  height: 100vh;
+
+  .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+  }
+
+  .activity {
+    display: block;
+    border: 1px solid #cccccc;
+    box-shadow: 2px 2px 19px #aaa;
+    border-radius: 0.5em;
+    opacity: 0.8;
+    min-width: 80px;
+    min-height: 80px;
+    max-width: 250px;
+    text-align: left;
+    z-index: 20;
+    position: absolute;
+    background-color: #f1f1f1;
+    color: #3d3d3d;
+    font-family: helvetica, sans-serif;
+    padding: 1em;
+    font-size: 0.7em;
+    cursor: default;
+    transition: box-shadow 0.15s ease-in;
+
+    .activity-status {
+      position: absolute;
+      right: 4px;
+      bottom: 4px;
+      cursor: pointer;
+
+      i {
+        font-size: 2em;
+      }
+    }
+
+    &.activity-definition {
+      border: 1px solid #5a8fee;
+    }
+
+    &.activity-executed {
+      border: 1px solid #6faa44;
+      background-color: #6faa44;
+      color: #ffffff;
+
+      h5, h5 i {
+        color: #ffffff;
+      }
+    }
+
+    &.activity-blocking {
+      border: 1px solid #5a8fee;
+      background-color: #5a8fee;
+      color: #ffffff;
+
+      h5, h5 i {
+        color: #ffffff;
+      }
+    }
+
+    &.activity-faulted {
+      border: 1px solid #d23c3c;
+      background-color: #d23c3c;
+      color: #ffffff;
+
+      h5, h5 i {
+        color: #ffffff;
+      }
+    }
+  }
+
+}
+
+.jtk-connector {
+  z-index: 4;
+}
+
+.jtk-endpoint, .endpointTargetLabel, .endpointSourceLabel {
+  z-index: 21;
+  cursor: pointer;
+}
+
+.endpointTargetLabel, .endpointSourceLabel {
+  font-size: 8px;
+}
+
+.jtk-overlay {
+  background-color: transparent;
+}
+
+.connection-label {
+  z-index: 31;
+  border: 1px solid #cccccc;
+  padding: 0 0.5em;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background-color: white;
+}
